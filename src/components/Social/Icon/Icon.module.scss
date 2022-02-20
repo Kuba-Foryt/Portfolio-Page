@@ -1,0 +1,66 @@
+.icon {
+  width: 40px;
+  text-align: center;
+  position: relative;
+  margin: 0 15px 35px 15px;
+  z-index: 15;
+  transition: 0.5s ease;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 10px;
+    color: rgba(235, 235, 235, 1);
+    transition: 0.3s ease;
+    transform: scale(1);
+  }
+
+  &:hover &__link {
+    color: rgba(25, 25, 25, 1);
+    transform: scale(1.2);
+  }
+}
+
+.contact__icon__link {
+  display: block;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: rgba(235, 235, 235, 1);
+  transition: 0.3s ease;
+  transform: scale(1);
+
+  &:hover {
+    color: rgba(25, 25, 25, 1);
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 600px) {
+  .icon {
+    margin: 0 15px 25px 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    margin: 0 35px 55px 35px;
+    width: 46px;
+
+    &__link {
+      font-size: 23px;
+    }
+  }
+
+  .contact__icon__link {
+    font-size: 23px;
+  }
+}

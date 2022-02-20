@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Merienda&family=Space+Mono&display=swap");
+
+.navBarScrolled {
+  z-index: 150;
+  position: fixed;
+  height: 100px;
+  padding: 25px 25px 25px 25px;
+  width: 100%;
+  background-color: rgba(55, 55, 55, 0.75);
+  transition: background-color 0.35s ease-in;
+}
+
+.navBar__logoNameScrolled {
+  position: absolute;
+  left: 50%;
+  line-height: 50px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  color: rgba(225, 225, 225, 0.8);
+  font-family: "Space Mono", "Montserrat" sans-serif;
+  transform: translateX(-50%);
+  transition: color 0.35s ease-in;
+}
+
+.navBar {
+  z-index: 150;
+  position: fixed;
+  height: 100px;
+  padding: 25px 25px 25px 25px;
+  width: 100%;
+  transition: background-color 0.5s ease-in;
+
+  &__icon,
+  &__icon__active {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+
+    &:hover {
+      background-color: rgba(55, 55, 55, 1);
+      transition: 0.3s ease;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+
+      & .navBar__hamburger,
+      & .navBar__hamburger::before,
+      & .navBar__hamburger::after,
+      & .navBar__hamburger::before,
+      & .navBar__hamburger::after {
+        background-color: rgba(255, 255, 255, 0.9);
+        transition: 0.2s ease;
+      }
+    }
+  }
+
+  &__icon__active .navBar__hamburger::after {
+    transform: rotate(-45deg) translate(0, 0);
+  }
+  &__icon__active .navBar__hamburger:before {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  &__icon__active .navBar__hamburger {
+    height: 0px;
+  }
+
+  &__hamburger {
+    width: 40%;
+    position: absolute;
+    height: 1.5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(55, 55, 55, 1);
+    transition: all 0.3s ease;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1.5px;
+      background: rgba(55, 55, 55, 1);
+      transition: all 0.3s ease;
+    }
+
+    &:before {
+      transform: translate(0, -7px);
+    }
+
+    &::after {
+      transform: translate(0, 7px);
+    }
+  }
+
+  &__logoName {
+    position: absolute;
+    left: 50%;
+    line-height: 50px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    // text-shadow: -1px 0 rgba(55, 55, 55, 1),
+    //   0 1px rgba(55, 55, 55, 1) 1px 0 rgba(55, 55, 55, 1),
+    //   0 -1px rgba(55, 55, 55, 1);
+    // color: rgba(255, 255, 255, 1);
+    color: rgba(55, 55, 55, 1);
+    font-family: "Space Mono", "Montserrat" sans-serif;
+    transform: translateX(-50%);
+    transition: color 0.35s ease-in;
+
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .navBar {
+    &__icon,
+    &__icon__active {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__logoName {
+      line-height: 50px;
+      font-size: 20px;
+    }
+
+    &__hamburger::before {
+      transform: translate(0, -8px);
+    }
+
+    &__hamburger::after {
+      transform: translate(0, 8px);
+    }
+  }
+}

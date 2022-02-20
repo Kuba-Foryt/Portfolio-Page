@@ -1,0 +1,145 @@
+.about {
+  padding: 40px 30px 10px;
+  position: relative;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(10, 10, 10, 1) 15%,
+    rgba(55, 55, 55, 1) 35%,
+    rgba(85, 85, 85, 1) 50%,
+    rgba(55, 55, 55, 1) 75%,
+    rgba(25, 25, 25, 1) 90%,
+    rgba(15, 15, 15, 1) 100%
+  );
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 25px;
+
+    &__imgWrapper {
+      justify-self: center;
+      border-radius: 0%;
+
+      &__image {
+        width: 100px;
+        height: 140px;
+        border-radius: 6%;
+        margin: auto auto;
+        background: rgba(230, 205, 165, 1)
+          url(../../assets/images/CCI_000015.png) center center / cover;
+        box-shadow: 0px 0px 2px 4px rgba(6, 8, 9, 0.7);
+      }
+    }
+  }
+
+  &__me {
+    margin: auto 0;
+    padding: 0 0 10px 10px;
+    color: white;
+    // font-size: 12px;
+    text-align: left;
+
+    &__name {
+      font-size: 20px;
+      text-transform: uppercase;
+      color: rgba(220, 200, 170, 1);
+      padding-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 13px;
+      text-align: justify;
+
+      &__span {
+        color: rgba(220, 200, 170, 1);
+      }
+    }
+  }
+  &__work {
+    display: flex;
+    flex-direction: column;
+
+    &__text {
+      padding-bottom: 15px;
+      font-size: 14px;
+      text-align: justify;
+      color: white;
+
+      &__span {
+        color: rgba(220, 200, 170, 1);
+      }
+
+      &__title {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: rgba(220, 200, 170, 1);
+        padding-bottom: 8px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .about {
+    padding: 40px 60px 10px;
+
+    &__info__imgWrapper {
+      width: auto;
+      &__image {
+        margin: 0 0 0 0;
+        width: 120px;
+        height: 160px;
+      }
+    }
+
+    &__me {
+      &__name {
+        font-size: 26px;
+      }
+      &__text {
+        font-size: 14px;
+      }
+    }
+
+    &__work__text {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 740px) {
+  .about {
+    &__info {
+      padding-bottom: 30px;
+    }
+    &__work {
+      flex-direction: row;
+      align-items: center;
+
+      &__text {
+        padding-left: 0px;
+        width: 40%;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    padding: 40px 120px 10px;
+
+    &__info__imgWrapper__image {
+      margin: 0 0 0 0;
+      width: 210px;
+      height: 270px;
+    }
+
+    &__me {
+      padding-left: 30px;
+    }
+  }
+}

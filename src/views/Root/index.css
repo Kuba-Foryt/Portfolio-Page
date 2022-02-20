@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,700");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+.container {
+  opacity: 0;
+  transition: 4s opacity;
+}
+
+.fade-in {
+  opacity: 1;
+}

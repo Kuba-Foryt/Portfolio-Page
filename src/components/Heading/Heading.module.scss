@@ -1,0 +1,33 @@
+.heading {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  font-size: 44px;
+  color: rgba(200, 200, 200, 0.18);
+  text-transform: uppercase;
+
+  &__header {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-35%);
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
+
+    &__span {
+      color: rgba(220, 200, 170, 1);
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .heading {
+    font-size: 56px;
+
+    &__header {
+      font-size: 42px;
+    }
+  }
+}
