@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./Form.module.scss";
 import emailjs from "@emailjs/browser";
+import AppContext from "../../context";
 
 export function Form() {
   const form = useRef();
@@ -25,32 +26,48 @@ export function Form() {
   };
 
   return (
-    <form ref={form} className={styles.form} onSubmit={handleSubmit}>
-      <label className={styles.form__label}>Name</label>
-      <input
-        className={styles.form__input}
-        type="text"
-        name="from"
-        placeholder="Your name"
-        required
-      />
-      <label className={styles.form__label}>Email</label>
-      <input
-        className={styles.form__input}
-        type="email"
-        name="email"
-        placeholder="Your email"
-        required
-      />
-      <label className={styles.form__label}>Message</label>
-      <textarea
-        className={styles.form__textarea}
-        name="message"
-        placeholder="Your message"
-        maxLength="300"
-        required
-      />
-      <input className={styles.form__btn} type="submit" value="Send" />
-    </form>
+    <AppContext.Consumer>
+      {(context) => (
+        <form ref={form} className={styles.form} onSubmit={handleSubmit}>
+          <label className={styles.form__label}>Name</label>
+          <input
+            className={
+              !context.menuOpened
+                ? styles.form__input
+                : styles.form__input__notActive
+            }
+            type="text"
+            name="from"
+            placeholder="Your name"
+            required
+          />
+          <label className={styles.form__label}>Email</label>
+          <input
+            className={
+              !context.menuOpened
+                ? styles.form__input
+                : styles.form__input__notActive
+            }
+            type="email"
+            name="email"
+            placeholder="Your email"
+            required
+          />
+          <label className={styles.form__label}>Message</label>
+          <textarea
+            className={
+              !context.menuOpened
+                ? styles.form__textarea
+                : styles.form__textarea__notActive
+            }
+            name="message"
+            placeholder="Your message"
+            maxLength="300"
+            required
+          />
+          <input className={styles.form__btn} type="submit" value="Send" />
+        </form>
+      )}
+    </AppContext.Consumer>
   );
 }

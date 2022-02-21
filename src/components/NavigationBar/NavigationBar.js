@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 import styles from "./NavigationBar.module.scss";
 import AppContext from "../../context";
 
 function NavigationBar() {
-  const [background, setBackground] = useState(false);
+  const [whiteLogo, setWhiteLogo] = useState(false);
   const [height, setHeight] = useState(window.innerHeight);
   const updateDimensions = () => {
     setHeight(window.innerHeight);
@@ -15,9 +16,9 @@ function NavigationBar() {
 
   const changeBackground = () => {
     if (window.scrollY >= height) {
-      setBackground(true);
+      setWhiteLogo(true);
     } else {
-      setBackground(false);
+      setWhiteLogo(false);
     }
   };
 
@@ -26,13 +27,7 @@ function NavigationBar() {
   return (
     <AppContext.Consumer>
       {(context) => (
-        <div
-          className={
-            background && !context.menuOpened
-              ? styles.navBarScrolled
-              : styles.navBar
-          }
-        >
+        <div className={styles.navBar}>
           <div
             className={
               !context.menuOpened
@@ -43,14 +38,18 @@ function NavigationBar() {
           >
             <div className={styles.navBar__hamburger}></div>
           </div>
-          <h3
-            className={
-              background
-                ? styles.navBar__logoNameScrolled
-                : styles.navBar__logoName
-            }
-          >
-            kuba foryt
+          <h3>
+            {" "}
+            <Link
+              to="/Portfolio-Page/#"
+              className={
+                whiteLogo
+                  ? styles.navBar__logoNameScrolled
+                  : styles.navBar__logoName
+              }
+            >
+              kuba foryt
+            </Link>
           </h3>
         </div>
       )}
