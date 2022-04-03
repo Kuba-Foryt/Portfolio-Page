@@ -14,23 +14,65 @@
   );
 
   &__info {
-    display: flex;
+    position: relative;
     align-items: flex-start;
     padding-bottom: 25px;
 
     &__imgWrapper {
+      // width: 100px;
+      height: 340px;
       justify-self: center;
-      border-radius: 0%;
+      // border-radius: 100%;
+      background: url(../../assets/images/big7.png) no-repeat center / contain;
+      // border-radius: 100%;
+      // background: url(../../assets/images/32.png) no-repeat center / contain;
+    }
+  }
 
-      &__image {
-        width: 100px;
-        height: 140px;
-        border-radius: 6%;
-        margin: auto auto;
-        background: rgba(230, 205, 165, 1)
-          url(../../assets/images/CCI_000015.png) center center / cover;
-        box-shadow: 0px 0px 2px 4px rgba(6, 8, 9, 0.7);
+  &__create {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    &__text {
+      position: relative;
+      // padding-bottom: 15px;
+      font-size: 14px;
+      text-align: justify;
+      color: white;
+      z-index: 3;
+
+      & p {
+        margin-top: 10px;
       }
+
+      &__span {
+        color: rgba(220, 200, 170, 1);
+        z-index: 3;
+      }
+
+      &__title {
+        position: relative;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: rgba(220, 200, 170, 1);
+        text-align: justify;
+        z-index: 3;
+      }
+    }
+
+    &__imgWrapper {
+      position: absolute;
+      float: right;
+      right: 0;
+      bottom: 0;
+      width: 60%;
+      height: 90%;
+      background: url(../../assets/images/bigger.png) no-repeat center / contain;
+      z-index: 1;
+      opacity: 0.8;
     }
   }
 
@@ -57,42 +99,117 @@
       }
     }
   }
+
+  &__typing {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: row;
+    font-size: 22px;
+    transform: translateX(-50%);
+    color: white;
+    white-space: nowrap;
+
+    &__intro {
+      margin-right: 7px;
+    }
+
+    &__typed {
+      font-weight: 700;
+      color: rgba(220, 200, 170, 1);
+    }
+  }
+
+  &__resume {
+    position: absolute;
+    bottom: 35%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10%;
+
+    &__job {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: white;
+      text-shadow: -1px 0 rgba(55, 55, 55, 1), 0 1px rgba(55, 55, 55, 1),
+        1px 0 rgba(55, 55, 55, 1), 0 -1px rgba(55, 55, 55, 1);
+      cursor: pointer;
+      transform: scale(1);
+
+      &:hover {
+        // transform: scale(1.03);
+        color: rgba(220, 200, 170, 1);
+      }
+
+      &__fa {
+        margin: auto;
+        color: white;
+        font-size: 10px;
+      }
+    }
+  }
+
   &__work {
     display: flex;
     flex-direction: column;
 
+    &__title {
+      width: 100%;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: rgba(220, 200, 170, 1);
+      padding-top: 20px;
+      padding-bottom: 8px;
+      text-align: center;
+    }
+
     &__text {
-      padding-bottom: 15px;
       font-size: 14px;
       text-align: justify;
       color: white;
 
-      &__span {
-        color: rgba(220, 200, 170, 1);
+      &__p {
+        margin-bottom: 30px;
       }
 
-      &__title {
-        font-size: 20px;
-        text-transform: uppercase;
+      &__span {
         color: rgba(220, 200, 170, 1);
-        padding-bottom: 8px;
-        text-align: center;
       }
     }
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 400px) and (-webkit-min-device-pixel-ratio: 2) {
+  .about__resume__job {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) and (-webkit-min-device-pixel-ratio: 2) {
   .about {
     padding: 40px 60px 10px;
 
-    &__info__imgWrapper {
-      width: auto;
-      &__image {
-        margin: 0 0 0 0;
-        width: 120px;
-        height: 160px;
+    &__create {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+
+      &__text {
+        width: 70%;
       }
+
+      &__imgWrapper {
+        width: 40%;
+      }
+    }
+
+    &__info__imgWrapper {
+      height: 75vh;
     }
 
     &__me {
@@ -107,22 +224,104 @@
     &__work__text {
       font-size: 14px;
     }
+
+    &__typing {
+      top: 48%;
+    }
+
+    &__resume {
+      bottom: 32%;
+    }
   }
 }
 
-@media (min-width: 740px) {
+@media (min-width: 740px) and (-webkit-min-device-pixel-ratio: 2) {
   .about {
+    padding: 0 15%;
+
     &__info {
       padding-bottom: 30px;
     }
     &__work {
-      flex-direction: row;
-      align-items: center;
+      padding-bottom: 20px;
 
       &__text {
-        padding-left: 0px;
-        width: 40%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &__p {
+          // padding-top: 40px;
+          width: 33%;
+        }
+      }
+    }
+
+    &__create {
+      &__text__title {
+        white-space: nowrap;
+      }
+      &__imgWrapper {
+        width: 30%;
+      }
+    }
+
+    &__resume {
+      padding: 0 25%;
+    }
+  }
+}
+@media (min-width: 800px) {
+  .about {
+    &__info__imgWrapper {
+      height: 45vh;
+    }
+
+    &__typing {
+      font-size: 30px;
+    }
+
+    &__resume {
+      bottom: 35%;
+      padding: 0 15%;
+
+      &__job {
+        font-size: 16px;
+
+        &__fa {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .about {
+    padding: 0 15%;
+
+    &__work__text__p {
+      width: 40%;
+    }
+
+    &__info__imgWrapper {
+      height: 75vh;
+    }
+
+    &__typing {
+      font-size: 24px;
+    }
+
+    &__resume {
+      bottom: 33%;
+      padding: 0 15%;
+
+      &__job {
         font-size: 14px;
+
+        &__fa {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -140,6 +339,11 @@
 
     &__me {
       padding-left: 30px;
+    }
+
+    &__resume {
+      bottom: 35%;
+      padding: 0 25%;
     }
   }
 }

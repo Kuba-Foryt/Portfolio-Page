@@ -94,3 +94,10 @@
     background: transparent;
   }
 }
+
+@media (min-width: 1024px) {
+  .preload__name {
+    line-height: 50px;
+    font-size: 20px;
+  }
+}
