@@ -66,6 +66,61 @@
   }
 }
 
+.projectIL {
+  @extend .project;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 0px 1px 3px rgba(6, 8, 9, 0.7);
+  margin: 10px auto 10px;
+
+  &__content {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 60%;
+    $padding: 14px;
+    font-size: 12px;
+    padding: $padding;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.75) 10%,
+      rgba(0, 0, 0, 1) 100%
+    );
+
+    &__title {
+      position: relative;
+      width: max-content;
+      font-size: 16px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        left: calc($padding * -1);
+        bottom: -4px;
+        width: calc(100% + $padding);
+        background: rgba(230, 205, 165, 1);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.6s ease;
+      }
+    }
+
+    &__text {
+      padding: 8px 0 15px;
+      text-align: justify;
+    }
+
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+.projectIL:last-of-type {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .project {
     width: 300px;
@@ -73,20 +128,69 @@
     &__content {
       font-size: 14px;
       padding: 20px;
+
+      &__btn {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .projectIL {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (min-width: 410px) {
+  .projectIL:last-of-type {
+    display: block;
+  }
+}
+
+@media (min-width: 800px) and (orientation: portrait) {
+  .projectIL {
+    width: 300px;
+    height: 300px;
+
+    &__content {
+      top: 60%;
+      height: 40%;
+      font-size: 14px;
+      padding: 20px;
+
       &__btn {
         font-size: 13px;
       }
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .projectIL {
+    width: 300px;
+    height: 300px;
+
+    &__content {
+      top: 60%;
+      height: 40%;
+      font-size: 14px;
+      padding: 20px;
+
+      &__btn {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
 @media (min-width: 1180px) {
   .project {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
 
     &__content {
       font-size: 16px;
-      padding: 50px;
+      padding: 30px;
 
       &__title {
         font-size: 20px;
@@ -95,11 +199,50 @@
         font-size: 14px;
       }
     }
+
+    &IL {
+      width: 300px;
+      height: 300px;
+
+      &__content {
+        font-size: 16px;
+        padding: 20px;
+
+        &__title {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .project {
+    width: 400px;
+    height: 400px;
+
+    &IL {
+      width: 340px;
+      height: 340px;
+    }
+
+    // &__content {
+    //   font-size: 16px;
+    //   padding: 50px;
+
+    //   &__title {
+    //     font-size: 20px;
+    //   }
+    //   &__btn {
+    //     font-size: 14px;
+    //   }
+    // }
   }
 }
 
 @media (hover) {
-  .project__content {
+  .project__content,
+  .projectIL__content {
     transform: translateY(50%);
     transition: transform 0.5s ease;
 
@@ -110,10 +253,13 @@
   }
 
   .project:hover,
-  .project:focus-within {
+  .projectIL:hover,
+  .project:focus-within,
+  .projectIL:focus-within {
     transform: scale(1.05);
 
-    & .project__content {
+    & .project__content,
+    .projectIL__content {
       transform: translateY(0);
       transition-delay: 0.5s;
 

@@ -11,6 +11,7 @@ import ImmersiveLighting from "../ImmersiveLighting/ImmersiveLighting.js";
 import Investments from "../Investments/Investments.js";
 import styles from "./index.css";
 import FadeIn from "react-fade-in";
+import ScrollToTop from "../../components/ScrollToTop/ScrollToTop.js";
 
 function demoAsyncCall() {
   return new Promise((resolve) => setTimeout(() => resolve(), 2500));
@@ -45,6 +46,7 @@ class Root extends React.Component {
     return (
       <BrowserRouter>
         <AppContext.Provider value={contextElements}>
+          <ScrollToTop />
           <Menu menuOpened={this.state.menuOpened} />
           <NavigationBar toggleMenu={this.state.menuOpened} />
           <Routes>

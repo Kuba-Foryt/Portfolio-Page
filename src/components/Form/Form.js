@@ -53,6 +53,17 @@ export function Form() {
             placeholder="Your email"
             required
           />
+          <label className={styles.form__label}>Subject</label>
+          <input
+            className={
+              !context.menuOpened
+                ? styles.form__input
+                : styles.form__input__notActive
+            }
+            type="subject"
+            name="subject"
+            placeholder="Subject of message"
+          />
           <label className={styles.form__label}>Message</label>
           <textarea
             className={
@@ -62,7 +73,7 @@ export function Form() {
             }
             name="message"
             placeholder="Your message"
-            maxLength="300"
+            maxLength="360"
             required
           />
           <input className={styles.form__btn} type="submit" value="Send" />

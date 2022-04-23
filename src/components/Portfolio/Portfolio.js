@@ -4,6 +4,7 @@ import Heading from "../Heading/Heading";
 import Project from "../Project/Project";
 import BackgroundImage1 from "../../assets/images/checkers2.jpg";
 import BackgroundImage2 from "../../assets/images/il.png";
+import IL from "./IL/IL";
 
 const projects = {
   1: {
@@ -20,28 +21,31 @@ const projects = {
   },
 };
 
-class Portfolio extends React.Component {
-  render() {
-    return (
+const Portfolio = () => {
+  return (
+    <>
       <section className={styles.portfolio}>
         <Heading text="my" span="portfolio" behind="works" />
         <section className={styles.portfolio__projects}>
           <Project
+            project={"true"}
             title={projects[1].title}
             text={projects[1].text}
             link={projects[1].link}
             bcg={projects[1].bcg}
           />
           <Project
+            project={"true"}
             title={projects[2].title}
             text={projects[2].text}
             link={projects[2].link}
             bcg={projects[2].bcg}
           />
         </section>
+        <IL />
       </section>
-    );
-  }
-}
+    </>
+  );
+};
 
 export default Portfolio;

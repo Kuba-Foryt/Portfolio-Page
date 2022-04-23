@@ -4,9 +4,9 @@ import Root from "./views/Root/Root";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Root />
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById("root")
 );
 

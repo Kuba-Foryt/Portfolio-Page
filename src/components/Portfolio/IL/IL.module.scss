@@ -1,0 +1,478 @@
+.il__main {
+  position: relative;
+  height: 100vh;
+  // margin: 0 5%;
+  // width: 100%;
+  background: url(../../../assets/images/il2.png) center center / cover;
+
+  &__fade {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.85) 0%,
+      rgba(0, 0, 0, 0.15) 15%,
+      rgba(0, 0, 0, 0) 25%,
+      rgba(0, 0, 0, 0) 75%,
+      rgba(0, 0, 0, 0.15) 85%,
+      rgba(0, 0, 0, 0.85) 100%
+    );
+  }
+
+  &__title {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    padding: 0 10%;
+    // margin: 0 10%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
+    color: transparent;
+
+    &__span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 10%;
+      // margin: 0 10%;
+      background-image: linear-gradient(90deg, #e8cd64, #d9ae42);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+  }
+
+  &__name {
+    @extend .il__main__title;
+    top: 30%;
+    font-size: 24px;
+    // color: rgba(25, 25, 25, 1);
+    text-transform: uppercase;
+
+    &__span {
+      @extend .il__main__title__span;
+      background-image: linear-gradient(90deg, #e8cd64, #d9ae42);
+    }
+  }
+
+  &__for {
+    @extend .il__main__name;
+    top: 35%;
+    font-size: 18px;
+    // color: rgba(25, 25, 25, 1);
+    text-transform: none;
+
+    &__span {
+      @extend .il__main__name__span;
+      background-image: linear-gradient(90deg, #e8cd64, #d9ae42);
+    }
+  }
+
+  &__w3logo {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 80%;
+    height: 100px;
+    // padding: 0 10%;
+    // width: 500px;
+    // height: 50px;
+    // width: 100%;
+    background: url(../../../assets/images/w3logo.png) center center / cover;
+    // z-index: 22;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 3%;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #d9ae42;
+    border: 2px solid rgba(55, 55, 55, 1);
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    &:active,
+    &:visited {
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &:hover {
+      background-color: rgba(225, 225, 225, 0.8);
+      transform: translateX(-50%) scale(1.03);
+    }
+  }
+
+  &__nexusBtn {
+    @extend .il__main__btn;
+    top: 85%;
+  }
+}
+
+.il__separator {
+  height: 5vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.il__second {
+  @extend .il__main;
+  height: 100vh;
+  background: url(../../../assets/images/il3.png) center center / cover;
+
+  &__fade {
+    @extend .il__main__fade;
+  }
+
+  &__title {
+    @extend .il__main__title;
+
+    &__span {
+      @extend .il__main__title__span;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .il__main {
+    &__for {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .il__main {
+    &__for {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 460px) and (orientation: landscape) {
+  .il {
+    &__main {
+      &__title {
+        font-size: 14px;
+      }
+
+      &__name {
+        font-size: 16px;
+      }
+
+      &__for {
+        top: 36%;
+      }
+      &__w3logo {
+        top: 40%;
+        left: 12.5%;
+        width: 75%;
+        height: 150px;
+      }
+
+      &__btn {
+        top: 83%;
+        left: 25%;
+        font-size: 12px;
+        width: 160px;
+      }
+
+      &__nexusBtn {
+        left: 75%;
+      }
+    }
+
+    &__second {
+      &__container {
+        top: 18%;
+        left: 10%;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      &__title {
+        top: 8%;
+        width: 100%;
+        padding: 0 10%;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .il {
+    &__separator {
+      background-color: transparent;
+    }
+
+    &__main {
+      &__title {
+        font-size: 22px;
+      }
+
+      &__name {
+        top: 28%;
+        font-size: 44px;
+      }
+
+      &__for {
+        top: 34%;
+      }
+      &__w3logo {
+        top: 40%;
+        left: 12.5%;
+        width: 75%;
+        height: 250px;
+      }
+
+      &__btn {
+        top: 83%;
+        left: 25%;
+        font-size: 18px;
+        width: 240px;
+      }
+
+      &__nexusBtn {
+        left: 75%;
+      }
+    }
+
+    &__second {
+      &__container {
+        top: 18%;
+        left: 10%;
+        width: 80%;
+        flex-wrap: wrap;
+      }
+
+      &__title {
+        top: 8%;
+        width: 100%;
+        padding: 0 10%;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .il__second__container {
+    top: 28%;
+    left: 1%;
+    width: 98%;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 640px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .il__main {
+    &__for {
+      top: 38%;
+    }
+    &__w3logo {
+      top: 40%;
+      left: 32.5%;
+      width: 34%;
+      height: 150px;
+    }
+
+    &__btn {
+      top: 83%;
+      left: 25%;
+    }
+
+    &__nexusBtn {
+      left: 75%;
+    }
+  }
+}
+
+@media (min-width: 800px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  .il__second__container {
+    top: 28%;
+    left: 10%;
+    width: 80%;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 800px) and (orientation: portrait) {
+  .il {
+    &__main {
+      &__title {
+        font-size: 26px;
+      }
+
+      &__name {
+        font-size: 44px;
+      }
+
+      &__for {
+        top: 36%;
+      }
+      &__w3logo {
+        top: 40%;
+        left: 12.5%;
+        width: 75%;
+        height: 250px;
+      }
+
+      &__btn {
+        top: 83%;
+        left: 25%;
+        font-size: 18px;
+        width: 240px;
+      }
+
+      &__nexusBtn {
+        left: 75%;
+      }
+    }
+
+    &__second {
+      &__container {
+        top: 18%;
+        left: 10%;
+        width: 80%;
+        flex-wrap: wrap;
+      }
+
+      &__title {
+        top: 8%;
+        width: 100%;
+        padding: 0 10%;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .il {
+    &__separator {
+      background-color: transparent;
+    }
+
+    &__main {
+      &__title {
+        font-size: 22px;
+      }
+
+      &__name {
+        top: 28%;
+        font-size: 44px;
+      }
+
+      &__for {
+        top: 34%;
+      }
+      &__w3logo {
+        top: 40%;
+        left: 12.5%;
+        width: 75%;
+        height: 250px;
+      }
+
+      &__btn {
+        top: 83%;
+        left: 25%;
+        font-size: 18px;
+        width: 240px;
+      }
+
+      &__nexusBtn {
+        left: 75%;
+      }
+    }
+
+    &__second {
+      &__container {
+        top: 18%;
+        left: 10%;
+        width: 80%;
+        flex-wrap: wrap;
+      }
+
+      &__title {
+        top: 8%;
+        width: 100%;
+        padding: 0 10%;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .il {
+    &__main {
+      &__name {
+        top: 25%;
+      }
+
+      &__for {
+        top: 32.5%;
+      }
+      &__w3logo {
+        top: 40%;
+        height: 300px;
+      }
+    }
+
+    &__second {
+      &__container {
+        padding: 0 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .il {
+    &__main {
+      &__name {
+        top: 25%;
+      }
+
+      &__for {
+        top: 32.5%;
+      }
+      &__w3logo {
+        top: 40%;
+        height: 300px;
+      }
+    }
+
+    &__second {
+      &__container {
+        padding: 0%;
+      }
+    }
+  }
+}

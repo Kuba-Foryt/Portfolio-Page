@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Merienda&family=Space+Mono&display=swap");
+
 .about {
   padding: 40px 30px 10px;
   position: relative;
@@ -13,22 +15,6 @@
     rgba(15, 15, 15, 1) 100%
   );
 
-  &__info {
-    position: relative;
-    align-items: flex-start;
-    padding-bottom: 25px;
-
-    &__imgWrapper {
-      // width: 100px;
-      height: 340px;
-      justify-self: center;
-      // border-radius: 100%;
-      background: url(../../assets/images/big7.png) no-repeat center / contain;
-      // border-radius: 100%;
-      // background: url(../../assets/images/32.png) no-repeat center / contain;
-    }
-  }
-
   &__create {
     position: relative;
     display: flex;
@@ -43,23 +29,27 @@
       color: white;
       z-index: 3;
 
-      & p {
+      &__p {
+        position: relative;
         margin-top: 10px;
-      }
-
-      &__span {
-        color: rgba(220, 200, 170, 1);
         z-index: 3;
+
+        &__span {
+          color: rgba(220, 200, 170, 1);
+          z-index: 3;
+        }
       }
 
       &__title {
         position: relative;
-        font-weight: 700;
+        font-weight: 600;
         font-size: 20px;
         text-transform: uppercase;
-        color: rgba(220, 200, 170, 1);
+        color: #b9a165;
         text-align: justify;
         z-index: 3;
+        font-family: "Josefin Sans", sans-serif;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
       }
     }
 
@@ -76,83 +66,6 @@
     }
   }
 
-  &__me {
-    margin: auto 0;
-    padding: 0 0 10px 10px;
-    color: white;
-    // font-size: 12px;
-    text-align: left;
-
-    &__name {
-      font-size: 20px;
-      text-transform: uppercase;
-      color: rgba(220, 200, 170, 1);
-      padding-bottom: 8px;
-    }
-
-    &__text {
-      font-size: 13px;
-      text-align: justify;
-
-      &__span {
-        color: rgba(220, 200, 170, 1);
-      }
-    }
-  }
-
-  &__typing {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    display: flex;
-    flex-direction: row;
-    font-size: 22px;
-    transform: translateX(-50%);
-    color: white;
-    white-space: nowrap;
-
-    &__intro {
-      margin-right: 7px;
-    }
-
-    &__typed {
-      font-weight: 700;
-      color: rgba(220, 200, 170, 1);
-    }
-  }
-
-  &__resume {
-    position: absolute;
-    bottom: 35%;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 10%;
-
-    &__job {
-      font-size: 12px;
-      text-transform: uppercase;
-      font-weight: 500;
-      color: white;
-      text-shadow: -1px 0 rgba(55, 55, 55, 1), 0 1px rgba(55, 55, 55, 1),
-        1px 0 rgba(55, 55, 55, 1), 0 -1px rgba(55, 55, 55, 1);
-      cursor: pointer;
-      transform: scale(1);
-
-      &:hover {
-        // transform: scale(1.03);
-        color: rgba(220, 200, 170, 1);
-      }
-
-      &__fa {
-        margin: auto;
-        color: white;
-        font-size: 10px;
-      }
-    }
-  }
-
   &__work {
     display: flex;
     flex-direction: column;
@@ -161,10 +74,12 @@
       width: 100%;
       font-size: 20px;
       text-transform: uppercase;
-      color: rgba(220, 200, 170, 1);
+      color: #b9a165;
       padding-top: 20px;
       padding-bottom: 8px;
       text-align: center;
+      font-family: "Josefin Sans", sans-serif;
+      text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
     }
 
     &__text {
@@ -177,7 +92,8 @@
       }
 
       &__span {
-        color: rgba(220, 200, 170, 1);
+        color: #d3b058;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
       }
     }
   }
@@ -194,30 +110,15 @@
     padding: 40px 60px 10px;
 
     &__create {
-      position: relative;
       display: flex;
       flex-direction: row;
-      position: relative;
 
-      &__text {
+      &__text__p {
         width: 70%;
       }
 
       &__imgWrapper {
         width: 40%;
-      }
-    }
-
-    &__info__imgWrapper {
-      height: 75vh;
-    }
-
-    &__me {
-      &__name {
-        font-size: 26px;
-      }
-      &__text {
-        font-size: 14px;
       }
     }
 
@@ -228,31 +129,28 @@
     &__typing {
       top: 48%;
     }
-
-    &__resume {
-      bottom: 32%;
-    }
   }
 }
 
 @media (min-width: 740px) and (-webkit-min-device-pixel-ratio: 2) {
   .about {
-    padding: 0 15%;
+    padding: 0 15% 30px;
 
-    &__info {
-      padding-bottom: 30px;
-    }
     &__work {
       padding-bottom: 20px;
 
       &__text {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        // align-items: center;
+        > div {
+          margin: 10px 30px 0px 10px;
+        }
 
         &__p {
           // padding-top: 40px;
           width: 33%;
+          margin: auto 0;
         }
       }
     }
@@ -265,63 +163,32 @@
         width: 30%;
       }
     }
-
-    &__resume {
-      padding: 0 25%;
-    }
-  }
-}
-@media (min-width: 800px) {
-  .about {
-    &__info__imgWrapper {
-      height: 45vh;
-    }
-
-    &__typing {
-      font-size: 30px;
-    }
-
-    &__resume {
-      bottom: 35%;
-      padding: 0 15%;
-
-      &__job {
-        font-size: 16px;
-
-        &__fa {
-          font-size: 16px;
-        }
-      }
-    }
   }
 }
 
 @media (min-width: 800px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
   .about {
-    padding: 0 15%;
+    padding: 0 15% 30px;
 
     &__work__text__p {
       width: 40%;
     }
+  }
+}
 
-    &__info__imgWrapper {
-      height: 75vh;
+@media (min-width: 800px) {
+  .about {
+    &__work__text {
+      > div {
+        margin: 10px 30px 0px 10px;
+      }
     }
-
-    &__typing {
-      font-size: 24px;
-    }
-
-    &__resume {
-      bottom: 33%;
-      padding: 0 15%;
-
-      &__job {
-        font-size: 14px;
-
-        &__fa {
-          font-size: 14px;
-        }
+    &__create {
+      &__text__p {
+        width: 60%;
+      }
+      &__imgWrapper {
+        width: 40%;
       }
     }
   }
@@ -329,21 +196,109 @@
 
 @media (min-width: 1024px) {
   .about {
+    padding: 40px 120px 30px;
+
+    &__create {
+      margin: 30px auto;
+      display: flex;
+      padding: 0 15%;
+      &__text {
+        &__p {
+          width: 55%;
+          font-size: 16px;
+        }
+        &__title {
+          white-space: normal;
+          font-size: 24px;
+        }
+      }
+      &__imgWrapper {
+        width: 55%;
+      }
+    }
+
+    &__work {
+      padding: 0 15%;
+      &__title {
+        white-space: normal;
+        font-size: 24px;
+      }
+      &__text__p {
+        font-size: 16px;
+        margin: auto 0;
+      }
+    }
+  }
+}
+@media (min-width: 1180px) {
+  .about {
     padding: 40px 120px 10px;
 
-    &__info__imgWrapper__image {
-      margin: 0 0 0 0;
-      width: 210px;
-      height: 270px;
+    &__create {
+      margin-top: 30px;
+      padding: 0 15%;
+      &__text {
+        &__p {
+          width: 50%;
+          font-size: 18px;
+        }
+        &__title {
+          white-space: nowrap;
+          font-size: 28px;
+          width: 100%;
+        }
+      }
+      &__imgWrapper {
+        // padding: 0 25%;
+        // height: 95%;
+        left: 40%;
+      }
     }
+  }
+}
 
-    &__me {
-      padding-left: 30px;
-    }
-
-    &__resume {
-      bottom: 35%;
+@media (min-width: 1600px) {
+  .about {
+    &__create {
+      margin-top: 30px;
       padding: 0 25%;
+      &__text {
+        &__title {
+          font-size: 30px;
+          margin-bottom: 15px;
+        }
+        &__p {
+          width: 50%;
+          font-size: 20px;
+          margin: auto 0;
+        }
+      }
+      &__imgWrapper {
+        width: 25%;
+        // padding: 0 25%;
+        height: 95%;
+        left: 50%;
+      }
+    }
+
+    &__work {
+      padding: 0 25%;
+      padding-bottom: 30px;
+      &__title {
+        white-space: normal;
+        font-size: 30px;
+      }
+      &__text {
+        display: flex;
+        > div {
+          margin: 30px 30px 0px 30px;
+        }
+        &__p {
+          width: 50%;
+          font-size: 20px;
+          margin: auto 0;
+        }
+      }
     }
   }
 }

@@ -65,7 +65,8 @@
     &:hover,
     &:focus {
       background-color: rgb(15, 15, 15);
-      color: rgba(255, 255, 255, 0.8);
+      color: #d3b058;
+      font-weight: 700;
       border: 1px solid rgb(15, 15, 15);
     }
   }
@@ -87,5 +88,35 @@
 @media (min-width: 800px) {
   .form {
     width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .form {
+    width: 40%;
+    font-size: 28px;
+
+    &__label {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    &__input {
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
+      line-height: 24px;
+      padding: 2px 5px;
+    }
+
+    &__textarea {
+      font-size: 18px;
+      line-height: 24px;
+      height: 250px;
+    }
+
+    &__btn {
+      font-size: 18px;
+      padding: 5px 10px;
+    }
   }
 }
