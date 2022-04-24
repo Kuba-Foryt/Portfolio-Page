@@ -1,5 +1,4 @@
 .portfolio {
-  padding-bottom: 10px;
   width: 100%;
   font-size: 50px;
   background: linear-gradient(
@@ -25,7 +24,7 @@
     justify-content: center;
     margin: 0 40px;
 
-    &:first-child {
+    > div {
       margin: 10px auto 30px;
     }
   }
@@ -39,7 +38,7 @@
 
 @media (min-width: 1024px) {
   .portfolio {
-    padding: 0 50px 30px;
+    padding: 0 0 30px;
     margin: 0 auto;
     &__projects {
       display: flex;
@@ -49,12 +48,12 @@
 
 @media (min-width: 1600px) {
   .portfolio {
-    padding: 0 120px 30px;
+    padding: 0 0 30px;
   }
 }
 
 @media (min-width: 1920px) {
   .portfolio {
-    padding: 0 20% 30px;
+    padding: 0 0 30px;
   }
 }

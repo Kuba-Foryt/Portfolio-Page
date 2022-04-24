@@ -92,7 +92,7 @@
       }
 
       &__span {
-        color: #d3b058;
+        color: rgba(220, 200, 170, 1);
         text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
       }
     }
@@ -179,8 +179,14 @@
 @media (min-width: 800px) {
   .about {
     &__work__text {
+      display: flex;
       > div {
         margin: 10px 30px 0px 10px;
+      }
+
+      &__p {
+        margin: auto 0;
+        width: 40%;
       }
     }
     &__create {

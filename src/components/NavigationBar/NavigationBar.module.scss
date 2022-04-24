@@ -127,3 +127,10 @@
     }
   }
 }
+
+@media (hover) {
+  .navBar__logoName,
+  .navBar__logoName:focus-within {
+    transform: translateX(-50%);
+  }
+}
