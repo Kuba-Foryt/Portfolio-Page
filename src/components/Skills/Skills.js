@@ -1,46 +1,42 @@
 import React from "react";
 import styles from "./Skills.module.scss";
 import Heading from "../Heading/Heading";
+import Skill from "./Skill/Skill";
 
-import logo from "../../assets/images/jslogo.png";
+import Fade from "react-reveal/Fade.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHtml5,
+  faCss3,
+  faSass,
+  faJs,
+  faReact,
+  faNode,
+} from "@fortawesome/free-brands-svg-icons";
 
-// Init with default setup
-
-// Init with all options at default setting
-// const directionRevealDefault = DirectionReveal({
-//   selector: ".skills__container",
-//   itemSelector: ".skills__container__skill",
-//   animationName: "swing",
-//   animationPostfixEnter: "enter",
-//   animationPostfixLeave: "leave",
-//   enableTouch: true,
-//   touchThreshold: 250,
-// });
+const icons = {
+  html: <FontAwesomeIcon icon={faHtml5} />,
+  css: <FontAwesomeIcon icon={faCss3} />,
+  sass: <FontAwesomeIcon icon={faSass} />,
+  js: <FontAwesomeIcon icon={faJs} />,
+  react: <FontAwesomeIcon icon={faReact} />,
+  node: <FontAwesomeIcon icon={faNode} />,
+};
 
 const Skills = () => {
   return (
     <section className={styles.skills}>
       <Heading text="my" span="abilities" behind="skills" />
-      <div className={styles.skills__container}>
-        <div className={styles.skills__container__skill}>
-          <div className={styles.skills__container__skill__image}>1</div>
+      <Fade>
+        <div className={styles.skills__container}>
+          <Skill icon={icons.html} />
+          <Skill icon={icons.css} />
+          <Skill icon={icons.sass} />
+          <Skill icon={icons.js} />
+          <Skill icon={icons.react} />
+          <Skill icon={icons.node} />
         </div>
-        <div className={styles.skills__container__skill}>
-          <div className={styles.skills__container__skill__image}>2</div>
-        </div>
-        <div className={styles.skills__container__skill}>
-          <div className={styles.skills__container__skill__image}>3</div>
-        </div>
-        <div className={styles.skills__container__skill}>
-          <div className={styles.skills__container__skill__image}>4</div>
-        </div>
-        <div className={styles.skills__container__skill}>
-          <div className={styles.skills__container__skill__image}>5</div>
-        </div>
-        <div className={styles.skills__container__skill}>
-          <div className={styles.skills__container__skill__image}>6</div>
-        </div>
-      </div>
+      </Fade>
     </section>
   );
 };

@@ -24,10 +24,9 @@
     transform: scale(1);
   }
 
-  &:hover &__link,
-  &:hover .contact__icon__link {
+  &:hover &__link {
     color: rgba(25, 25, 25, 1);
-    // transform: scale(1.1);
+    transform: scale(1.2);
   }
 
   &MenuOpened {
@@ -37,7 +36,16 @@
 }
 
 .contact__icon {
+  text-align: center;
+  width: 40px;
   margin: 0 15px 35px 15px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: rgba(200, 200, 200, 0.8);
+    transform: scale(1.1);
+  }
 
   &__link {
     display: block;
@@ -65,14 +73,17 @@
 @media (min-width: 1024px) {
   .icon {
     margin: 0 35px 55px 35px;
-    width: 46px;
+    width: 50px;
 
     &__link {
       font-size: 23px;
     }
   }
 
-  .contact__icon__link {
-    font-size: 23px;
+  .contact__icon {
+    width: 48px;
+    &__link {
+      font-size: 23px;
+    }
   }
 }

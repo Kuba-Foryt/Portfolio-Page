@@ -11,7 +11,7 @@ export function Form() {
     emailjs
       .sendForm(
         "service_gmailkub",
-        "template_mpo6jc9",
+        "template_s5vhikp",
         form.current,
         "user_QlNjQwwc7YRaga5VNsi3a"
       )
@@ -60,7 +60,7 @@ export function Form() {
                 ? styles.form__input
                 : styles.form__input__notActive
             }
-            type="subject"
+            type="text"
             name="subject"
             placeholder="Subject of message"
           />

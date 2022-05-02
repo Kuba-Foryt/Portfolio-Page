@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./IL.module.scss";
 import { useNavigate } from "react-router";
 import Project from "../../Project/Project";
@@ -6,15 +6,39 @@ import Image1 from "../../../assets/images/1.png";
 import Image2 from "../../../assets/images/2.png";
 import Image3 from "../../../assets/images/3.png";
 import Image4 from "../../../assets/images/4.png";
+import Slider1 from "../../../assets/images/il2.png";
+import Slider2 from "../../../assets/images/il4.jpg";
+import Slider3 from "../../../assets/images/il6.png";
+import Slider4 from "../../../assets/images/il7.png";
+import Slider5 from "../../../assets/images/il8.png";
 import Fade from "react-reveal/Fade.js";
 import Zoom from "react-reveal/Zoom.js";
 
+import AwesomeSlider from "react-awesome-slider";
+import "react-awesome-slider/dist/styles.css";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+
+//Slider
+
 const IL = () => {
   const navigate = useNavigate();
+  const AutoplaySlider = withAutoplay(AwesomeSlider);
 
   return (
     <>
       <article className={styles.il__main}>
+        <AutoplaySlider
+          play={true}
+          interval={3000}
+          bullets={false}
+          fillParent={true}
+        >
+          <div data-src={Slider1} />
+          <div data-src={Slider2} />
+          <div data-src={Slider3} />
+          <div data-src={Slider4} />
+          <div data-src={Slider5} />
+        </AutoplaySlider>
         <div className={styles.il__main__fade} />
         <Zoom>
           <p className={styles.il__main__title}>

@@ -49,11 +49,17 @@
 @media (min-width: 1600px) {
   .portfolio {
     padding: 0 0 30px;
+    &__projects {
+      padding: 0 17.5%;
+    }
   }
 }
 
 @media (min-width: 1920px) {
   .portfolio {
     padding: 0 0 30px;
+    &__projects {
+      padding: 0 20%;
+    }
   }
 }
