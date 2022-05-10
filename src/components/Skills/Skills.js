@@ -29,12 +29,12 @@ const Skills = () => {
       <Heading text="my" span="abilities" behind="skills" />
       <Fade>
         <div className={styles.skills__container}>
-          <Skill icon={icons.html} />
-          <Skill icon={icons.css} />
-          <Skill icon={icons.sass} />
-          <Skill icon={icons.js} />
-          <Skill icon={icons.react} />
-          <Skill icon={icons.node} />
+          <Skill icon={icons.html} title="HTML" />
+          <Skill icon={icons.css} title="CSS" />
+          <Skill icon={icons.sass} title="SASS" />
+          <Skill icon={icons.js} title="JAVASCRIPT" />
+          <Skill icon={icons.react} title="REACT" />
+          <Skill icon={icons.node} title="NODE JS" />
         </div>
       </Fade>
     </section>

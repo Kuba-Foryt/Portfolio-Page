@@ -9,6 +9,9 @@ const Skill = (props) => {
           {props.icon}
         </div>
       </div>
+      <div className={styles.skills__container__skill__content}>
+        {props.title}
+      </div>
     </div>
   );
 };

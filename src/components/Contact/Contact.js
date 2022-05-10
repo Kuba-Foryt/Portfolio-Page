@@ -10,7 +10,7 @@ class Contact extends React.Component {
       <section id="contact" className={styles.contact}>
         <Heading text="get in" span="touch" behind="contact" />
         <Form />
-        <Social header="null" />
+        <Social header={false} />
         <p className={styles.contact__footer}>&copy; 2022 kuba foryt</p>
       </section>
     );

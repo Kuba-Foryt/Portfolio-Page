@@ -5,6 +5,8 @@ import Portfolio from "../../components/Portfolio/Portfolio.js";
 import Contact from "../../components/Contact/Contact.js";
 import Skills from "../../components/Skills/Skills.js";
 
+import { FullPage, Slide } from "react-full-page";
+
 const Homepage = () => (
   <>
     <Header />

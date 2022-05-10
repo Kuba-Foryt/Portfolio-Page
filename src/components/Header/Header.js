@@ -3,7 +3,6 @@ import styles from "./Header.module.scss";
 import Social from "../Social/Social";
 
 import Fade from "react-reveal/Fade.js";
-
 class Header extends React.Component {
   render() {
     return (

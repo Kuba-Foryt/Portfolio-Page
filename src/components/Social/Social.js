@@ -27,9 +27,7 @@ class Social extends React.Component {
   render() {
     return (
       <div
-        className={
-          this.props.header === "true" ? styles.social : styles.footer__social
-        }
+        className={this.props.header ? styles.social : styles.footer__social}
       >
         <Icon
           icon={icons.linkedin}

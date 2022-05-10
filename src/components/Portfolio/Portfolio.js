@@ -4,7 +4,7 @@ import Heading from "../Heading/Heading";
 import Project from "../Project/Project";
 import BackgroundImage1 from "../../assets/images/checkers2.jpg";
 import BackgroundImage2 from "../../assets/images/il.png";
-import IL from "./IL/IL";
+import ILPortfolio from "./ILPortfolio/ILPortfolio";
 import Zoom from "react-reveal/Zoom.js";
 
 const projects = {
@@ -47,7 +47,7 @@ const Portfolio = () => {
             />
           </Zoom>
         </section>
-        <IL />
+        <ILPortfolio />
       </section>
     </>
   );

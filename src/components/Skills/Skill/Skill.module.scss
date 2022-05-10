@@ -16,11 +16,16 @@
 
     &:hover {
       transform: perspective(500px) rotateX(0deg);
+
+      // &__content {
+      //   transform: translateY(30%);
+      //   transition: transform 0.5s ease;
+      // }
     }
 
     &:hover &__image {
       background-color: rgba(0, 0, 0, 0.2);
-      color: rgba(225, 225, 225, 0.6);
+      color: rgba(225, 225, 225, 0.4);
       box-shadow: 0 0 0 150px;
     }
     &:hover &__image > &__image__icon {
@@ -28,9 +33,9 @@
     }
 
     &__image {
-      width: 65px;
-      height: 65px;
-      line-height: 65px;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
       font-size: 2.5em;
       background-color: rgba(225, 225, 225, 0.8);
       text-align: center;
@@ -41,6 +46,35 @@
         color: rgba(0, 0, 0, 0.85);
         transition: color 0.9s;
       }
+    }
+
+    &__content {
+      position: absolute;
+      top: 83%;
+      color: #b9a165;
+      text-shadow: 1px 2px 6px rgba(0, 0, 0, 1);
+      height: 10%;
+      font-weight: 700;
+      font-size: 13px;
+      transform: translateY(0%);
+      transition: transform 0.5s ease;
+    }
+  }
+}
+
+@media (hover) {
+  .skills__container__skill__content {
+    transform: translateY(200%);
+    transition: transform 0.5s ease;
+    // opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+
+  .skills__container__skill:hover {
+    .skills__container__skill__content {
+      transform: translateY(0);
+      transition: transform 0.5s ease;
+      opacity: 1;
     }
   }
 }
@@ -60,11 +94,26 @@
       height: 150px;
 
       &__image {
-        width: 100px;
-        height: 100px;
-        line-height: 100px;
+        width: 85px;
+        height: 85px;
+        line-height: 85px;
         font-size: 3.5em;
       }
+
+      &__content {
+        font-size: 18px;
+      }
     }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0ms !important;
   }
 }
