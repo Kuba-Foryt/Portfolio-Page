@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio-Page/static/css/main.e0b659d2.css",
-    "main.js": "/Portfolio-Page/static/js/main.0343381b.js",
+    "main.css": "/Portfolio-Page/static/css/main.d58cab5d.css",
+    "main.js": "/Portfolio-Page/static/js/main.61b5de53.js",
     "static/js/787.86e70ff7.chunk.js": "/Portfolio-Page/static/js/787.86e70ff7.chunk.js",
     "static/media/3.png": "/Portfolio-Page/static/media/3.f6059f04bf5832eeca70.png",
     "static/media/il3.png": "/Portfolio-Page/static/media/il3.fe9c77188f21c7d16ebd.png",
@@ -22,12 +22,12 @@
     "static/media/swidnik.jpg": "/Portfolio-Page/static/media/swidnik.ac2d2af49863eddc3dd4.jpg",
     "static/media/backgroundResized.jpg": "/Portfolio-Page/static/media/backgroundResized.ffe6a2215cedc024e005.jpg",
     "index.html": "/Portfolio-Page/index.html",
-    "main.e0b659d2.css.map": "/Portfolio-Page/static/css/main.e0b659d2.css.map",
-    "main.0343381b.js.map": "/Portfolio-Page/static/js/main.0343381b.js.map",
+    "main.d58cab5d.css.map": "/Portfolio-Page/static/css/main.d58cab5d.css.map",
+    "main.61b5de53.js.map": "/Portfolio-Page/static/js/main.61b5de53.js.map",
     "787.86e70ff7.chunk.js.map": "/Portfolio-Page/static/js/787.86e70ff7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0b659d2.css",
-    "static/js/main.0343381b.js"
+    "static/css/main.d58cab5d.css",
+    "static/js/main.61b5de53.js"
   ]
 }
