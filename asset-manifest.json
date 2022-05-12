@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/Portfolio-Page/static/css/main.d58cab5d.css",
-    "main.js": "/Portfolio-Page/static/js/main.61b5de53.js",
+    "main.css": "/Portfolio-Page/static/css/main.8e8bff76.css",
+    "main.js": "/Portfolio-Page/static/js/main.553c9be5.js",
     "static/js/787.86e70ff7.chunk.js": "/Portfolio-Page/static/js/787.86e70ff7.chunk.js",
     "static/media/3.png": "/Portfolio-Page/static/media/3.f6059f04bf5832eeca70.png",
     "static/media/il3.png": "/Portfolio-Page/static/media/il3.fe9c77188f21c7d16ebd.png",
     "static/media/il2.png": "/Portfolio-Page/static/media/il2.b0225d36b8b165a2ec02.png",
     "static/media/il6.png": "/Portfolio-Page/static/media/il6.e49ee01f1e02686d55b1.png",
     "static/media/4.png": "/Portfolio-Page/static/media/4.37e2f2f8edb7ade3f77f.png",
+    "static/media/9.png": "/Portfolio-Page/static/media/9.0b4b3ce46dd02726a8d9.png",
+    "static/media/7.png": "/Portfolio-Page/static/media/7.86ce86a67c15bed627ed.png",
+    "static/media/10.png": "/Portfolio-Page/static/media/10.67b82042d10781acbfad.png",
     "static/media/il.png": "/Portfolio-Page/static/media/il.26ffd55fe6e3efc322dc.png",
     "static/media/2.png": "/Portfolio-Page/static/media/2.f9ec48ef702cc330b2d7.png",
     "static/media/1.png": "/Portfolio-Page/static/media/1.34d36d3aaf60ffec881b.png",
+    "static/media/5.png": "/Portfolio-Page/static/media/5.cd4f8e8171efd3259b6e.png",
+    "static/media/6.png": "/Portfolio-Page/static/media/6.6ee328ce953535cd70c9.png",
     "static/media/big7.png": "/Portfolio-Page/static/media/big7.60429d7f7bd117a1ea38.png",
     "static/media/il4.jpg": "/Portfolio-Page/static/media/il4.74cb2ef1cb1ac125eda9.jpg",
     "static/media/il7.png": "/Portfolio-Page/static/media/il7.865574440040efcd0172.png",
@@ -22,12 +27,12 @@
     "static/media/swidnik.jpg": "/Portfolio-Page/static/media/swidnik.ac2d2af49863eddc3dd4.jpg",
     "static/media/backgroundResized.jpg": "/Portfolio-Page/static/media/backgroundResized.ffe6a2215cedc024e005.jpg",
     "index.html": "/Portfolio-Page/index.html",
-    "main.d58cab5d.css.map": "/Portfolio-Page/static/css/main.d58cab5d.css.map",
-    "main.61b5de53.js.map": "/Portfolio-Page/static/js/main.61b5de53.js.map",
+    "main.8e8bff76.css.map": "/Portfolio-Page/static/css/main.8e8bff76.css.map",
+    "main.553c9be5.js.map": "/Portfolio-Page/static/js/main.553c9be5.js.map",
     "787.86e70ff7.chunk.js.map": "/Portfolio-Page/static/js/787.86e70ff7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d58cab5d.css",
-    "static/js/main.61b5de53.js"
+    "static/css/main.8e8bff76.css",
+    "static/js/main.553c9be5.js"
   ]
 }
