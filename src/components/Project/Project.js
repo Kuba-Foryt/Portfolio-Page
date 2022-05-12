@@ -4,37 +4,49 @@ import styles from "./Project.module.scss";
 const Project = (props) => {
   return (
     <div
-      className={props.project === "true" ? styles.project : styles.projectIL}
+      className={
+        props.project
+          ? styles.project
+          : props.projectIL
+          ? styles.projectIL
+          : styles.iconIL
+      }
       style={{ backgroundImage: props.bcg }}
     >
       <div
         className={
-          props.project === "true"
+          props.project
             ? styles.project__content
-            : styles.projectIL__content
+            : props.projectIL
+            ? styles.projectIL__content
+            : styles.iconIL__content
         }
       >
         <h2
           className={
-            props.project === "true"
+            props.project
               ? styles.project__content__title
-              : styles.projectIL__content__title
+              : props.projectIL
+              ? styles.projectIL__content__title
+              : styles.iconIL__content__title
           }
         >
           {props.title}
         </h2>
         <p
           className={
-            props.project === "true"
+            props.project
               ? styles.project__content__text
-              : styles.projectIL__content__text
+              : props.projectIL
+              ? styles.projectIL__content__text
+              : styles.iconIL__content__text
           }
         >
           {props.text}
         </p>
         <a
           className={
-            props.project === "true"
+            props.project
               ? styles.project__content__btn
               : styles.projectIL__content__btn
           }

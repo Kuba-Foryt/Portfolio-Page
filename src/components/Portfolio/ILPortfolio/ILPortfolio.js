@@ -77,25 +77,29 @@ const ILPortfolio = () => {
         <Fade>
           <div className={styles.il__second__container}>
             <Project
-              project={"false"}
+              project={false}
+              projectIL={true}
               title={"Redefines"}
               text={"Reworks lighting to get pleasing effect in all situations"}
               bcg={`url(${Image2})`}
             />{" "}
             <Project
-              project={"false"}
+              project={false}
+              projectIL={true}
               title={"Addicts"}
               text={"Covers all areas from main game and two DLCs"}
               bcg={`url(${Image4})`}
             />{" "}
             <Project
-              project={"false"}
+              project={false}
+              projectIL={true}
               title={"Enhances"}
               text={"Eliminates all vanilla issues "}
               bcg={`url(${Image3})`}
             />{" "}
             <Project
-              project={"false"}
+              project={false}
+              projectIL={true}
               title={"Expands"}
               text={"Adds over 20 weather types, new clouds and effects"}
               bcg={`url(${Image1})`}

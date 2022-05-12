@@ -44,6 +44,7 @@ class Root extends React.Component {
       return <Preload />;
     }
     return (
+      // <React.StrictMode>
       <BrowserRouter>
         <AppContext.Provider value={contextElements}>
           <ScrollToTop />
@@ -57,6 +58,7 @@ class Root extends React.Component {
           </Routes>
         </AppContext.Provider>
       </BrowserRouter>
+      // </React.StrictMode>
     );
   }
 }
