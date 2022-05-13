@@ -9,13 +9,13 @@ const ILPage = (props) => {
   return (
     <>
       <div className={styles.container}>
-        {props.slider === "slider1" ? (
+        {/* {props.slider === "slider1" ? (
           <SliderPage1 />
         ) : props.slider === "slider2" ? (
           <SliderPage2 />
         ) : props.slider === "slider3" ? (
           <SliderPage3 />
-        ) : null}
+        ) : null} */}
 
         <div
           className={
@@ -59,85 +59,73 @@ const ILPage = (props) => {
               height="180"
               src="https://www.youtube.com/embed/tFnl9h9DLQ0"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/sEPoDl31Rb0"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/LdkmsQHWkNY"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/KzPqQ78038o"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/KR1LVxboIEE"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/SpI3HZw7-Fg"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/VJUlBcJVVT4"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/Ea3u9aybkFY"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
             <iframe
               width="300"
               height="180"
               src="https://www.youtube.com/embed/CvMMpsR4VXU"
               title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allow="fullscreen"
             ></iframe>
           </section>
         )}
-        <p className={styles.descr__footer}>&copy; 2022 kuba foryt</p>
+        <p
+          className={
+            props.footer ? styles.descr__footer : styles.descr__noFooter
+          }
+        >
+          &copy; 2022 kuba foryt
+        </p>
       </div>
     </>
   );

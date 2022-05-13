@@ -138,6 +138,7 @@ const ImmersiveLighting = () => (
         title={pagesContent[4].title}
         // text={pagesContent[4].text}
         content={"videos"}
+        footer={true}
       />
     </Slide>
   </FullPage>

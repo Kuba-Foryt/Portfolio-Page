@@ -103,6 +103,10 @@
     text-transform: capitalize;
     font-size: 12px;
   }
+
+  &__noFooter {
+    display: none;
+  }
 }
 
 @media (min-width: 600px) {
