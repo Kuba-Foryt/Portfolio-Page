@@ -38,67 +38,17 @@
   .il__homepage__btn,
   .il__main__nexusBtn {
     top: 83%;
-    font-size: 12px;
-    width: 160px;
-    left: 75%;
-  }
-}
-.il__homepage__btn {
-  left: 50%;
-}
-
-@media (min-width: 640px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
-  .il__homepage__btn,
-  .il__main__nexusBtn {
-    top: 83%;
-    left: 75%;
-    font-size: 12px;
-  }
-  .il__homepage__btn {
-    left: 50%;
-  }
-}
-
-@media (min-width: 800px) and (orientation: portrait) {
-  .il__homepage__btn,
-  .il__main__nexusBtn {
-    top: 83%;
-    font-size: 18px;
-    width: 240px;
-    left: 75%;
-  }
-  .il__homepage__btn {
-    left: 50%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .il__homepage__btn,
-  .il__main__nexusBtn {
-    top: 83%;
-    font-size: 18px;
-    width: 240px;
-    left: 75%;
-  }
-  .il__homepage__btn {
-    left: 50%;
-  }
-}
-
-@media (min-width: 460px) and (orientation: landscape) {
-  .il__homepage__btn,
-  .il__main__nexusBtn {
-    top: 83%;
     left: 75%;
     font-size: 12px;
     width: 160px;
   }
   .il__homepage__btn {
+    top: 70%;
     left: 50%;
   }
 }
 
-@media (min-width: 640px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 640px) and (orientation: landscape) {
   .il__main__nexusBtn {
     top: 83%;
     left: 75%;
@@ -108,15 +58,13 @@
     left: 50%;
   }
 }
-
 @media (min-width: 800px) and (orientation: portrait) {
-  .il {
-    &__main__nexusBtn {
-      top: 83%;
-      left: 75%;
-      font-size: 18px;
-      width: 240px;
-    }
+  .il__homepage__btn,
+  .il__main__nexusBtn {
+    top: 83%;
+    font-size: 18px;
+    width: 240px;
+    left: 75%;
   }
   .il__homepage__btn {
     left: 50%;

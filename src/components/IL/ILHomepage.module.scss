@@ -9,7 +9,7 @@
 
   &__text {
     position: absolute;
-    top: 40%;
+    top: 33%;
     left: 50%;
     width: 90%;
     line-height: 60px;
@@ -33,8 +33,16 @@
   }
 }
 
+@media (min-width: 450px) and (orientation: landscape) {
+  .header__text {
+    top: 33%;
+    font-size: 30px;
+    text-shadow: 10px 11px 14px rgba(0, 0, 0, 1);
+  }
+}
 @media (min-width: 600px) {
   .header__text {
+    top: 33%;
     font-size: 34px;
     text-shadow: 10px 11px 14px rgba(0, 0, 0, 1);
   }
@@ -55,6 +63,7 @@
 
 @media (min-width: 1024px) {
   .header__text {
+    top: 42%;
     font-size: 60px;
     padding: 0;
   }

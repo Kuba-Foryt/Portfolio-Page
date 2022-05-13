@@ -177,6 +177,45 @@
   display: block;
 }
 
+@media (orientation: landscape) {
+  .iconIL {
+    width: 100px;
+    height: 100px;
+
+    &__content {
+      $padding: 7px;
+      padding: $padding;
+      font-size: 9px;
+      // padding: 20px;
+      &__title {
+        font-size: 10px;
+      }
+    }
+  }
+}
+@media (min-width: 320px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  .iconIL {
+    width: 100px;
+    height: 100px;
+
+    &__content {
+      $padding: 7px;
+      padding: $padding;
+      font-size: 9px;
+      // padding: 20px;
+      &__title {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+@media (min-width: 410px) {
+  .projectIL:last-of-type {
+    display: block;
+  }
+}
+
 @media (min-width: 600px) {
   .project {
     width: 300px;
@@ -197,14 +236,18 @@
   }
 
   .iconIL {
-    width: 120px;
-    height: 120px;
-  }
-}
+    width: 100px;
+    height: 100px;
 
-@media (min-width: 410px) {
-  .projectIL:last-of-type {
-    display: block;
+    &__content {
+      $padding: 7px;
+      padding: $padding;
+      font-size: 9px;
+      // padding: 20px;
+      &__title {
+        font-size: 10px;
+      }
+    }
   }
 }
 
@@ -237,6 +280,23 @@
       // padding: 20px;
       &__title {
         font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (min-width: 840px) and (orientation: landscape) {
+  .iconIL {
+    width: 130px;
+    height: 130px;
+
+    &__content {
+      $padding: 8px;
+      padding: $padding;
+      font-size: 11px;
+      // padding: 20px;
+      &__title {
+        font-size: 12px;
       }
     }
   }

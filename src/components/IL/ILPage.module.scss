@@ -120,7 +120,7 @@
 @media (orientation: landscape) {
   .descr {
     &__images {
-      top: 40%;
+      top: 50%;
       left: 5%;
       width: 90%;
       display: flex;
@@ -167,10 +167,10 @@
 @media (min-width: 760px) {
   .descr {
     &__text {
-      font-size: 14px;
-      width: 60%;
+      font-size: 12px;
+      width: 75%;
       &__h2 {
-        font-size: 26px;
+        font-size: 24px;
       }
     }
     &__images {
