@@ -285,13 +285,13 @@
   }
 }
 
-@media (min-width: 840px) and (orientation: landscape) {
+@media (min-width: 870px) and (orientation: landscape) {
   .iconIL {
-    width: 130px;
-    height: 130px;
+    width: 110px;
+    height: 110px;
 
     &__content {
-      $padding: 8px;
+      $padding: 5px;
       padding: $padding;
       font-size: 11px;
       // padding: 20px;
