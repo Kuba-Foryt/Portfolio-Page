@@ -9,13 +9,13 @@ const ILPage = (props) => {
   return (
     <>
       <div className={styles.container}>
-        {props.slider === "slider1" ? (
+        {/* {props.slider === "slider1" ? (
           <SliderPage1 />
         ) : props.slider === "slider2" ? (
           <SliderPage2 />
         ) : props.slider === "slider3" ? (
           <SliderPage3 />
-        ) : null}
+        ) : null} */}
 
         <div
           className={
