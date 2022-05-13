@@ -3,18 +3,18 @@ import ILHomepage from "../../components/IL/ILHomepage.js";
 import Portfolio from "../../components/Portfolio/Portfolio.js";
 import { FullPage, Slide } from "react-full-page";
 import ILPage from "../../components/IL/ILPage.js";
-import bcg1 from "../../assets/images/3.png";
-import bcg2 from "../../assets/images/2.png";
-import bcg3 from "../../assets/images/il3.png";
-import bcg4 from "../../assets/images/il6.png";
-import bcg5 from "../../assets/images/5.png";
-import bcg6 from "../../assets/images/6.png";
-import bcg7 from "../../assets/images/7.png";
-import bcg8 from "../../assets/images/il7.png";
-import bcg9 from "../../assets/images/9.png";
-import bcg10 from "../../assets/images/10.png";
+import bcg1 from "../../assets/images/3.jpg";
+import bcg2 from "../../assets/images/2.jpg";
+import bcg3 from "../../assets/images/il3.jpg";
+import bcg4 from "../../assets/images/il6.jpg";
+import bcg5 from "../../assets/images/5.jpg";
+import bcg6 from "../../assets/images/6.jpg";
+import bcg7 from "../../assets/images/7.jpg";
+import bcg8 from "../../assets/images/il7.jpg";
+import bcg9 from "../../assets/images/9.jpg";
+import bcg10 from "../../assets/images/10.jpg";
 import bcg11 from "../../assets/images/il4.jpg";
-import bcg12 from "../../assets/images/il8.png";
+import bcg12 from "../../assets/images/il8.jpg";
 
 const pagesContent = {
   1: {
@@ -51,7 +51,7 @@ const pagesContent = {
   },
   3: {
     title: "Add-ons",
-    text: "It introduces many things not present in vanilla as volumetric clouds in Skellige or new fogFX, eliminates environmental light probes in all regions and changes other things I forgot to mention here.",
+    text: "It introduces many things not present in vanilla as volumetric clouds in Skellige or new fogFX, but also eliminates environmental light probes in all regions and changes other things I forgot to mention here.",
     p1Title: "Clouds",
     p1Text: "New volumetric clouds from Last Wish Quest",
     p1Bcg: `url(${bcg9})`,
@@ -78,6 +78,7 @@ const ImmersiveLighting = () => (
     </Slide>
     <Slide>
       <ILPage
+        page1={true}
         title={pagesContent[1].title}
         text={pagesContent[1].text}
         p1Title={pagesContent[1].p1Title}
@@ -92,11 +93,11 @@ const ImmersiveLighting = () => (
         p4Title={pagesContent[1].p4Title}
         p4Text={pagesContent[1].p4Text}
         p4Bcg={pagesContent[1].p4Bcg}
-        slider={"slider1"}
       />
     </Slide>
     <Slide>
       <ILPage
+        page2={true}
         title={pagesContent[2].title}
         text={pagesContent[2].text}
         p1Title={pagesContent[2].p1Title}
@@ -111,11 +112,11 @@ const ImmersiveLighting = () => (
         p4Title={pagesContent[2].p4Title}
         p4Text={pagesContent[2].p4Text}
         p4Bcg={pagesContent[2].p4Bcg}
-        slider={"slider2"}
       />
     </Slide>
     <Slide>
       <ILPage
+        page3={true}
         title={pagesContent[3].title}
         text={pagesContent[3].text}
         p1Title={pagesContent[3].p1Title}
@@ -130,7 +131,6 @@ const ImmersiveLighting = () => (
         p4Title={pagesContent[3].p4Title}
         p4Text={pagesContent[3].p4Text}
         p4Bcg={pagesContent[3].p4Bcg}
-        slider={"slider3"}
       />
     </Slide>
     <Slide>

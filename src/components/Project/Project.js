@@ -12,6 +12,7 @@ const Project = (props) => {
           : styles.iconIL
       }
       style={{ backgroundImage: props.bcg }}
+      onClick={props.fn}
     >
       <div
         className={

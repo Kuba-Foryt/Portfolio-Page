@@ -1,10 +1,10 @@
 import React from "react";
 
-import Slider1 from "../../assets/images/il2.png";
+import Slider1 from "../../assets/images/il2.jpg";
 import Slider2 from "../../assets/images/il4.jpg";
-import Slider3 from "../../assets/images/il6.png";
-import Slider4 from "../../assets/images/il7.png";
-import Slider5 from "../../assets/images/il8.png";
+import Slider3 from "../../assets/images/il6.jpg";
+import Slider4 from "../../assets/images/il7.jpg";
+import Slider5 from "../../assets/images/il8.jpg";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";

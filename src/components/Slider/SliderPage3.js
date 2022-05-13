@@ -1,10 +1,10 @@
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
-import bcg1 from "../../assets/images/9.png";
-import bcg2 from "../../assets/images/10.png";
+import bcg1 from "../../assets/images/9.jpg";
+import bcg2 from "../../assets/images/10.jpg";
 import bcg3 from "../../assets/images/il4.jpg";
-import bcg4 from "../../assets/images/il8.png";
+import bcg4 from "../../assets/images/il8.jpg";
 
 const AutoplaySlider = withAutoplay(AwesomeSlider);
 

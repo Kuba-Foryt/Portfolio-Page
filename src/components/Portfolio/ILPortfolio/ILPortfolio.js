@@ -4,10 +4,10 @@ import { useNavigate } from "react-router";
 import Project from "../../Project/Project";
 import NexusBtn from "../../Btn/NexusBtn";
 import Slider from "../../Slider/Slider";
-import Image1 from "../../../assets/images/1.png";
-import Image2 from "../../../assets/images/2.png";
-import Image3 from "../../../assets/images/3.png";
-import Image4 from "../../../assets/images/4.png";
+import Image1 from "../../../assets/images/1.jpg";
+import Image2 from "../../../assets/images/2.jpg";
+import Image3 from "../../../assets/images/3.jpg";
+import Image4 from "../../../assets/images/4.jpg";
 
 import Fade from "react-reveal/Fade.js";
 import Zoom from "react-reveal/Zoom.js";

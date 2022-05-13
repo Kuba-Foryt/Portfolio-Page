@@ -3,7 +3,7 @@ import styles from "./Portfolio.module.scss";
 import Heading from "../Heading/Heading";
 import Project from "../Project/Project";
 import BackgroundImage1 from "../../assets/images/checkers2.jpg";
-import BackgroundImage2 from "../../assets/images/il.png";
+import BackgroundImage2 from "../../assets/images/il.jpg";
 import ILPortfolio from "./ILPortfolio/ILPortfolio";
 import Zoom from "react-reveal/Zoom.js";
 
