@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(10, 10, 10, 1) 15%,
+    rgba(55, 55, 55, 1) 35%,
+    rgba(85, 85, 85, 1) 50%,
+    rgba(55, 55, 55, 1) 75%,
+    rgba(25, 25, 25, 1) 90%,
+    rgba(15, 15, 15, 1) 100%
+  );
+
+  &__text {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    width: 90%;
+    line-height: 60px;
+    font-size: 34px;
+    padding: 20px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #d9ae42;
+    text-shadow: 10px 11px 14px rgba(0, 0, 0, 1);
+    font-family: "Josefin Sans", sans-serif;
+    cursor: pointer;
+    transform: translateX(-50%) scale(1);
+    transition: transform 0.7s ease;
+
+    &:hover,
+    &:focus {
+      -webkit-transform: scale(1.1);
+      transform: translateX(-50%) scale(1.1);
+    }
+  }
+
+  &__gif {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    height: 160px;
+    width: 320px;
+    transform: translateX(-50%);
+    background: url(../../assets/images/checkersGIF.gif) center center/cover;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    padding: 10px 20px;
+    border-radius: 3%;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #d9ae42;
+    color: rgba(0, 0, 0, 1);
+    border: 2px solid rgba(55, 55, 55, 1);
+    cursor: pointer;
+    transition: 0.2s ease;
+    z-index: 3;
+
+    &:active,
+    &:visited {
+      color: rgba(0, 0, 0, 1);
+    }
+
+    &:hover {
+      background-color: rgba(225, 225, 225, 0.8);
+      transform: translateX(-50%) scale(1.03);
+    }
+  }
+}
+
+@media (min-width: 410px) {
+  .header {
+    &__text {
+      font-size: 40px;
+    }
+    &__gif {
+      width: 410px;
+      height: 205px;
+    }
+  }
+}
+
+@media (min-width: 460px) and (orientation: landscape) {
+  .header {
+    &__btn {
+      top: 70%;
+      width: 160px;
+      font-size: 12px;
+    }
+
+    &__gif {
+      top: 35%;
+      left: 50%;
+
+      height: 135px;
+      width: 270px;
+    }
+
+    &__text {
+      top: 15%;
+      font-size: 30px;
+      text-shadow: 10px 11px 14px rgba(0, 0, 0, 1);
+    }
+
+    &__btn {
+      top: 80%;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .header__text {
+    top: 12%;
+    font-size: 34px;
+    text-shadow: 10px 11px 14px rgba(0, 0, 0, 1);
+  }
+}
+
+@media (min-width: 640px) and (orientation: landscape) {
+  .header__btn {
+    top: 80%;
+  }
+}
+
+@media (min-width: 760px) {
+  .header__text {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .header {
+    &__text {
+      font-size: 80px;
+      line-height: 110px;
+    }
+
+    &__gif {
+      top: 33%;
+
+      height: 380px;
+      width: 760px;
+    }
+
+    &__btn {
+      top: 80%;
+      font-size: 18px;
+      width: 240px;
+    }
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .header {
+    &__text {
+      top: 12%;
+      font-size: 60px;
+      padding: 0;
+    }
+    &__gif {
+      top: 25%;
+
+      height: 380px;
+      width: 760px;
+    }
+
+    &__btn {
+      font-size: 22px;
+      width: 340px;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .header {
+    &__text {
+      font-size: 100px;
+      text-shadow: 22px 23px 25px rgba(0, 0, 0, 1);
+    }
+    &__gif {
+      top: 30%;
+      height: 400px;
+      width: 800px;
+    }
+
+    &__btn {
+      top: 85%;
+    }
+  }
+}

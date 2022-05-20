@@ -1,0 +1,94 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 2px 4px rgba(6, 8, 9, 0.7);
+  background: url(../../assets/images/checkers2.jpg) center center/cover;
+  transition: all 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.text {
+  width: 200px;
+  font-size: 14px;
+  text-align: justify;
+  color: white;
+  margin: 15px auto 25px;
+  // &__span {
+  //   color: rgba(220, 200, 170, 1);
+  // }
+}
+
+@media (min-width: 640px) and (orientation: landscape) {
+  .container {
+    width: 70%;
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+
+  .text {
+    margin: auto;
+  }
+}
+@media (min-width: 800px) and (orientation: landscape) {
+  .container {
+    width: 55%;
+  }
+
+  .text {
+    margin: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: 60%;
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+
+  .text {
+    margin: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 440px;
+    flex-direction: row;
+    margin-bottom: 35px;
+  }
+
+  .text {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    width: 580px;
+    flex-direction: row;
+    margin-bottom: 70px;
+  }
+
+  .image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .text {
+    width: 240px;
+    font-size: 20px;
+  }
+}

@@ -14,14 +14,14 @@ import {
   faNode,
 } from "@fortawesome/free-brands-svg-icons";
 
-const icons = {
-  html: <FontAwesomeIcon icon={faHtml5} />,
-  css: <FontAwesomeIcon icon={faCss3} />,
-  sass: <FontAwesomeIcon icon={faSass} />,
-  js: <FontAwesomeIcon icon={faJs} />,
-  react: <FontAwesomeIcon icon={faReact} />,
-  node: <FontAwesomeIcon icon={faNode} />,
-};
+const content = [
+  { icon: <FontAwesomeIcon icon={faHtml5} />, title: "HTML" },
+  { icon: <FontAwesomeIcon icon={faCss3} />, title: "CSS" },
+  { icon: <FontAwesomeIcon icon={faSass} />, title: "SASS" },
+  { icon: <FontAwesomeIcon icon={faJs} />, title: "JAVASCRIPT" },
+  { icon: <FontAwesomeIcon icon={faReact} />, title: "REACT" },
+  { icon: <FontAwesomeIcon icon={faNode} />, title: "NODE JS" },
+];
 
 const Skills = () => {
   return (
@@ -29,12 +29,9 @@ const Skills = () => {
       <Heading text="my" span="abilities" behind="skills" />
       <Fade>
         <div className={styles.skills__container}>
-          <Skill icon={icons.html} title="HTML" />
-          <Skill icon={icons.css} title="CSS" />
-          <Skill icon={icons.sass} title="SASS" />
-          <Skill icon={icons.js} title="JAVASCRIPT" />
-          <Skill icon={icons.react} title="REACT" />
-          <Skill icon={icons.node} title="NODE JS" />
+          {content.map(({ icon, title }) => {
+            return <Skill key={title} icon={icon} title={title} />;
+          })}
         </div>
       </Fade>
     </section>

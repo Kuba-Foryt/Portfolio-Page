@@ -1,9 +1,11 @@
 import React from "react";
-import Portfolio from "../../components/Portfolio/Portfolio.js";
+import CheckersHomepage from "../../components/Checkers/CheckersHomepage.js";
+import CheckersPage from "../../components/Checkers/CheckersPage.js";
 
 const Checkers = () => (
   <>
-    <Portfolio></Portfolio>
+    <CheckersHomepage />
+    <CheckersPage />
   </>
 );
 

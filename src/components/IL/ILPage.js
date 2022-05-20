@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./ILPage.module.scss";
 import Project from "../Project/Project";
 import SliderPage1 from "../Slider/SliderPage1";
@@ -6,11 +6,8 @@ import SliderPage2 from "../Slider/SliderPage2";
 import SliderPage3 from "../Slider/SliderPage3";
 
 const ILPage = (props) => {
-  // const container = document.querySelector("#container");
-  const container = useRef();
-
   const changeBcg = (e) => {
-    setBackground(getComputedStyle(e.target).backgroundImage);
+    setBackground(getComputedStyle(e.currentTarget).backgroundImage);
   };
 
   const [background, setBackground] = useState("");
@@ -27,18 +24,8 @@ const ILPage = (props) => {
             ? styles.container__third
             : styles.container__forth
         }
-        id={"container"}
-        ref={container}
         style={{ backgroundImage: background }}
       >
-        {/* {props.slider === "slider1" ? (
-          <SliderPage1 />
-        ) : props.slider === "slider2" ? (
-          <SliderPage2 />
-        ) : props.slider === "slider3" ? (
-          <SliderPage3 />
-        ) : null} */}
-
         <div
           className={
             !props.content ? styles.descr__text : styles.descr__textVideo
@@ -55,9 +42,6 @@ const ILPage = (props) => {
               text={props.p1Text}
               bcg={props.p1Bcg}
               fn={changeBcg}
-              // onClick={(e) => {
-              //   console.log(e.target, container);
-              // }}
             />
             <Project
               project={false}
@@ -65,16 +49,6 @@ const ILPage = (props) => {
               text={props.p2Text}
               bcg={props.p2Bcg}
               fn={changeBcg}
-              // onClick={(e) => {
-              //   setBackground(style.backgroundImage);
-              //   console.log(
-              //     e.target,
-              //     getComputedStyle(e.target).backgroundImage,
-              //     container.current,
-              //     style.backgroundImage,
-              //     background
-              //   );
-              // }}
             />
             <Project
               project={false}
